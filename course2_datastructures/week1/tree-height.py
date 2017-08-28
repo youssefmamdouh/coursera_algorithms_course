@@ -15,11 +15,11 @@ class TreeHeight:
         maxHeight = 0
         heights_dict = {node:0 for node in range(self.n)}
         for vertex in range(self.n):
-            if (vertex in heights_dict and heights_dict[vertex] != 0):
+            if (heights_dict[vertex] != 0):
                 continue
             node = vertex
             while node != -1:
-                if (node in heights_dict and heights_dict[node] != 0):
+                if (heights_dict[node] != 0):
                     heights_dict[vertex] += heights_dict[node]
                     break
                 heights_dict[vertex] += 1
